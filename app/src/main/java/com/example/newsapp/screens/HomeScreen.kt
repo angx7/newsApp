@@ -67,7 +67,7 @@ fun HomeScreen(innerPadding : PaddingValues) {
                 Text(
                     text = "Buscar",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
+                    fontSize = 15.sp
                 )
             }
         )
@@ -113,12 +113,13 @@ fun HomeScreen(innerPadding : PaddingValues) {
             items(noticias) { idx ->
                 Card(
                     modifier = Modifier
-                        .width(250.dp)
+                        .width(300.dp)
                         .height(200.dp)
                         .padding(end = 10.dp),
                     colors = CardDefaults.cardColors(
                         containerColor = RecentCards
                     ),
+                    shape = RoundedCornerShape(30.dp)
                 ) {
                     Column(
                         modifier = Modifier
@@ -149,6 +150,15 @@ fun HomeScreen(innerPadding : PaddingValues) {
             }
         }
 
+        // Contenido principal
+
+        Text(
+            text = "Alrededor del mundo",
+            fontSize = 26.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .padding(top = 20.dp, bottom = 20.dp)
+        )
 
 
     }
