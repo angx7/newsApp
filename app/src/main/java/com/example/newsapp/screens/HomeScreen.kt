@@ -12,6 +12,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -154,11 +157,45 @@ fun HomeScreen(innerPadding : PaddingValues) {
 
         Text(
             text = "Alrededor del mundo",
-            fontSize = 26.sp,
+            fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .padding(top = 20.dp, bottom = 20.dp)
         )
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2)
+        ) {
+
+            items(noticias){ news ->
+                Card (
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(220.dp)
+                        .padding(10.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.LightGray
+                    ),
+                    shape = RoundedCornerShape(25.dp)
+                ) {
+                    Column (
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(10.dp),
+                        verticalArrangement = Arrangement.Bottom
+                    ){
+                        Text(
+                            text = news,
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.Black,
+                        )
+                    }
+                }
+            }
+        }
+
+
+
 
 
     }
