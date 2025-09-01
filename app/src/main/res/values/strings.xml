@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="lastnews">Últimas noticias</string>
+    <string name="around_the_world">Alrededor del mundo</string>
 </resources>
