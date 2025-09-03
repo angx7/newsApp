@@ -83,8 +83,6 @@ fun HomeScreen(innerPadding : PaddingValues) {
 
         // Encabezado
 
-
-
         Text(
             text = stringResource(R.string.lastnews),
             fontSize = 26.sp,
